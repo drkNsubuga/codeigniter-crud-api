@@ -24,7 +24,7 @@ The config/crud_api.php file provides options for configuring the CRUD API. Opti
 This project is based on [PHP-CRUD-API](https://github.com/mevdschee/php-crud-api) by Marco van de Voort.
 
 ## Contributing
-This project was created by Nsubuga Derrick. Contributions are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request.
+Contributions are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
