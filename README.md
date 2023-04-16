@@ -1,5 +1,5 @@
 # CodeIgniter CRUD API
-This is a package for the CodeIgniter PHP framework that provides a CRUD (Create, Read, Update, Delete) API for a database. The package is built using the popular [PhpCrudApi](https://github.com/mevdschee/php-crud-api)library and adds CodeIgniter-specific functionality and configuration.
+This plugin provides a simple integration of the [PhpCrudApi](https://github.com/mevdschee/php-crud-api) library into CodeIgniter projects, allowing for automatic API generation based on the project's database.  It provides CodeIgniter-specific functionality and configuration.
 
 ## Installation
 1. Download the latest version of the package from the releases page.
