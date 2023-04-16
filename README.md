@@ -1,5 +1,5 @@
 # CodeIgniter CRUD API
-This plugin provides a simple integration of the [PhpCrudApi](https://github.com/mevdschee/php-crud-api) library into CodeIgniter projects, allowing for automatic API generation based on the project's database.  It provides CodeIgniter-specific functionality and configuration.
+This package provides a simple integration of the [PhpCrudApi](https://github.com/mevdschee/php-crud-api) library into CodeIgniter projects, allowing for automatic API generation based on the project's database.  It provides CodeIgniter-specific functionality and configuration.
 
 ## Installation
 1. Download the latest version of the package from the releases page.
