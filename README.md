@@ -5,7 +5,8 @@ This package provides a simple integration of the [PhpCrudApi](https://github.co
 1. Download the latest version of the package from the releases page.
 2. Extract the contents of the archive to your CodeIgniter project's application directory.
 3. Copy the files from this package to the correspoding folder in your application folder. 
-4. Update the **`crud_api.php`** file with your database credentials and other configuration options.
+4. Install the PhpCrudApi library via Composer project's root directory: **`composer require mevdschee/php-crud-api`**
+5. Update the **`crud_api.php`** file with your database credentials and other configuration options.
 Usage
 5. Once installed, the CRUD API can be accessed via the /records endpoint of your CodeIgniter application. For example, if your CodeIgniter application is running on `http://localhost`, the CRUD API can be accessed at **`http://localhost/records`**.
 
