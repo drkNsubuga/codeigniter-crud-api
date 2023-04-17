@@ -2,12 +2,14 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![codecov](https://codecov.io/gh/drkNsubuga/codeigniter-crud-api/branch/main/graph/badge.svg)](https://codecov.io/gh/drkNsubuga/codeigniter-crud-api) ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/drkNsubuga/codeigniter-crud-api)
  ![GitHub all releases](https://img.shields.io/github/downloads/drkNsubuga/codeigniter-crud-api/total) 
 
-This is a package for the CodeIgniter PHP framework that provides a CRUD (Create, Read, Update, Delete) API for a database. The package is built using the popular [PhpCrudApi](https://github.com/mevdschee/php-crud-api)library and adds CodeIgniter-specific functionality and configuration.
+This Codeigniter package provides a simple integration of the [PhpCrudApi](https://github.com/mevdschee/php-crud-api) library, allowing for automatic API generation based on the project's database.  It provides CodeIgniter-specific functionality and configuration.
 
 ## Installation
 1. Download the latest version of the package from the releases page.
 2. Extract the contents of the archive to your CodeIgniter project's application directory.
 3. Copy the files from this package to the correspoding folder in your application folder. 
+4. Install the PhpCrudApi library via Composer project's root directory: **`composer require mevdschee/php-crud-api`**
+5. Update the **`crud_api.php`** file with your database credentials and other configuration options.
 4. Update the **`crud_api.php`** file with your database credentials and other configuration options.
 Usage
 5. Once installed, the CRUD API can be accessed via the /records endpoint of your CodeIgniter application. For example, if your CodeIgniter application is running on `http://localhost`, the CRUD API can be accessed at **`http://localhost/records`**.
