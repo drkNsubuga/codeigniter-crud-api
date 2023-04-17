@@ -20,7 +20,6 @@ class Api extends CI_Controller {
 	}
 
 	public function index() {
-		echo "base path:" . Crud_api::get_base_path();
 		$this->crud_api->handle_request();
 	}
 
