@@ -1,0 +1,42 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger the workflow only when a tag starting with 'v' is pushed
+
+jobs:
+  create_release:
+    name: Create Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          # Install any dependencies needed for building the release
+          # For example, if you need to install composer, npm, etc.
+
+      - name: Set up release package name
+        run: |
+          # Extract repository name and tag from the tag name
+          REPO_NAME=${GITHUB_REPOSITORY#*/}
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          RELEASE_NAME="$REPO_NAME-$TAG_NAME"
+          echo "::set-output name=release_name::$RELEASE_NAME"
+
+      - name: Create Release Package
+        run: |
+          # Generate the release package, e.g., zip or tar
+          # You can use any build scripts or commands here to create the release package
+          # For example, if you have a 'build' directory, you can create a zip of its contents
+          RELEASE_NAME=$(echo ${{ steps.setup_release_name.outputs.release_name }})
+          zip -r "$RELEASE_NAME.zip" build
+
+      - name: Upload Release Package
+        uses: actions/upload-artifact@v2
+        with:
+          name: release
+          path: ${{ steps.setup_release_name.outputs.release_name }}.zip
