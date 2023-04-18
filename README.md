@@ -18,16 +18,19 @@ composer require mevdschee/php-crud-api
 $route['api/(.*)'] = 'api/index';
 ```
 
-## Uage
+## Usage
 Once installed, the CRUD API can be accessed via the /records endpoint of your CodeIgniter application. For example, if your CodeIgniter application is running on `http://localhost`, the CRUD API can be accessed at **`http://localhost/api/records`**.
 
 ## Endpoints
 The following endpoints are available:
 
-* **`/records`** - The main CRUD API endpoint. Provides Create, Read, Update, and Delete operations for database tables.
-* **`/openapi`** - Provides an OpenAPI (formerly Swagger) specification for the API.
-* **`/login`** - Provides a login page for managing user authentication.
-* **`/logout`** - Logs the user out and redirects them to the login page.
+**`/records`** - The main CRUD API endpoint. Provides Create, Read, Update, and Delete operations for database tables.
+**`/cache/clear`** - Clears the cache for the application, if applicable.
+**`/geojson`** - Provides a GeoJSON data endpoint for serving geospatial data.
+**`/openapi`** - Provides an OpenAPI (formerly Swagger) specification for the API.
+**`/status/ping`** - Provides a simple status check endpoint for testing the availability of the API.
+**`/login`** - Provides a login page for managing user authentication.
+**`/logout`** - Logs the user out and redirects them to the login page.
 
 ## Configuration
 The config/crud_api.php file provides options for configuring the CRUD API. Options include database credentials, cache settings, and OpenAPI information. See the comments in the file for more information.
