@@ -24,7 +24,7 @@ class Crud_api {
 	protected $CI;
 
 	/**
-	 * MY_Crud_api constructor.
+	 * Crud_api constructor.
 	 *
 	 * Initializes the php-crud-api instance with the specified configuration.
 	 *
@@ -40,7 +40,9 @@ class Crud_api {
 		$default_config = $this->CI->config->item('crud_api');
 
 		$config = array_merge($default_config, $config);
-		// var_dump($config);
+		
+		//translate db driver
+		$config['driver']=$this->_map_db_driver($config['driver']);
 		// Merge user config options with the default config options
 		$this->config = new Config($config);
 
@@ -50,6 +52,7 @@ class Crud_api {
 
 	/**
 	 * Handles an API request by delegating to the php-crud-api instance.
+	 * @return Response variable
 	 */
 	public function handle_request() {
 		$this->request = RequestFactory::fromGlobals();
@@ -62,7 +65,7 @@ class Crud_api {
 		// Remove the scheme and hostname from the URL
 		$parsed_url = parse_url(site_url(uri_string()));
 		$path = $parsed_url['path'];
-		$endpoints = ["/records", "/columns", "/openapi", "/login", "/logout"];
+		$endpoints = ["/records", "/columns", "/openapi", "/login", "/logout", "/cache/clear","/geojson","/openapi","/status/ping"];
 		$endpoint = SELF::get_endpoint($path, $endpoints);
 		// Extract the base URI from the path
 		$records_pos = strpos($path, $endpoint);
@@ -91,5 +94,36 @@ class Crud_api {
 		}
 		return "";
 	}
+
+	
+	/**
+	 * Maps between PHP-CRUD-API and CodeIgniter database drivers.
+	 *
+	 * @param string $driver Database driver name (either PHP-CRUD-API or CodeIgniter driver).
+	 * @param bool $reverse If true, maps from CodeIgniter to PHP-CRUD-API driver (default: false).
+	 * @return string|null Mapped database driver name, or null if not found.
+	 */
+	private function _map_db_driver($driver) {
+    $default_drivers = ['mysql', 'pgsql', 'sqlite', 'sqlsrv'];
+
+    // Define mappings for CodeIgniter drivers to PHP-CRUD-API drivers
+    $ci_driver_mapping = array(
+        'mysqli' => 'mysql',
+        'postgre' => 'pgsql',
+        'sqlite3' => 'sqlite',
+        // Add more mappings for other CodeIgniter drivers to PHP-CRUD-API drivers
+        // 'codeigniter_driver' => 'php_crud_api_driver',
+    );
+
+    // Check if the driver is in the list of default drivers, and return the driver if found
+    if (in_array($driver, $default_drivers)) {
+        return $driver;
+    } else {
+        // Check if the CodeIgniter driver is in the mapping array, and return the corresponding PHP-CRUD-API driver
+        return isset($ci_driver_mapping[$driver]) ? $ci_driver_mapping[$driver] : null;
+    }
+	}
+
+
 
 }
