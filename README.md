@@ -24,13 +24,13 @@ Once installed, the CRUD API can be accessed via the /records endpoint of your C
 ## Endpoints
 The following endpoints are available:
 
-**`/records`** - The main CRUD API endpoint. Provides Create, Read, Update, and Delete operations for database tables.
-**`/cache/clear`** - Clears the cache for the application, if applicable.
-**`/geojson`** - Provides a GeoJSON data endpoint for serving geospatial data.
-**`/openapi`** - Provides an OpenAPI (formerly Swagger) specification for the API.
-**`/status/ping`** - Provides a simple status check endpoint for testing the availability of the API.
-**`/login`** - Provides a login page for managing user authentication.
-**`/logout`** - Logs the user out and redirects them to the login page.
+* **`/records`** - The main CRUD API endpoint. Provides Create, Read, Update, and Delete operations for database tables.
+* **`/cache/clear`** - Clears the cache for the application, if applicable.
+* **`/geojson`** - Provides a GeoJSON data endpoint for serving geospatial data.
+* **`/openapi`** - Provides an OpenAPI (formerly Swagger) specification for the API.
+* **`/status/ping`** - Provides a simple status check endpoint for testing the availability of the API.
+* **`/login`** - Provides a login page for managing user authentication.
+* **`/logout`** - Logs the user out and redirects them to the login page.
 
 ## Configuration
 The config/crud_api.php file provides options for configuring the CRUD API. Options include database credentials, cache settings, and OpenAPI information. See the comments in the file for more information.
@@ -44,4 +44,4 @@ This project is based on [PHP-CRUD-API](https://github.com/mevdschee/php-crud-ap
 Contributions are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the [MIT License](https://github.com/drkNsubuga/codeigniter-crud-api/blob/main/LICENSE).
