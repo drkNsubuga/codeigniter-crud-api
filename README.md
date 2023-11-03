@@ -1,10 +1,10 @@
 # CodeIgniter CRUD API
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-![CodeIgniter Version](https://img.shields.io/badge/CodeIgniter-3.x-ff5733?style=for-the-badge) 
-![Latest Release](https://img.shields.io/github/v/release/drkNsubuga/codeigniter-crud-api/your-package?style=for-the-badge)
-![GitHub Stars](https://img.shields.io/github/stars/drkNsubuga/codeigniter-crud-api?style=for-the-badge)
-![GitHub Forks](https://img.shields.io/github/forks/drkNsubuga/codeigniter-crud-api?style=for-the-badge)
-![Open Issues](https://img.shields.io/github/issues/drkNsubuga/codeigniter-crud-api?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![CodeIgniter Version](https://img.shields.io/badge/CodeIgniter-3.x-ff5733) 
+![Latest Release](https://img.shields.io/github/v/release/drkNsubuga/codeigniter-crud-api)
+![GitHub Stars](https://img.shields.io/github/stars/drkNsubuga/codeigniter-crud-api)
+![GitHub Forks](https://img.shields.io/github/forks/drkNsubuga/codeigniter-crud-api)
+![Open Issues](https://img.shields.io/github/issues/drkNsubuga/codeigniter-crud-api)
 
 This Codeigniter package provides a simple integration of the [PhpCrudApi](https://github.com/mevdschee/php-crud-api) library, allowing for automatic API generation based on your database.  It provides CodeIgniter-specific functionality and configuration.
 
